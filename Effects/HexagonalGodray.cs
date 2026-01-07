@@ -113,7 +113,7 @@ namespace Celeste.Mod.StrawberryJam2021.Effects {
                 float num3 = -32f + Mod(rays[i].Y - level.Camera.Y * 0.9f, 244f);
                 float angle = rays[i].angle;
                 int length = rays[i].length;
-                Vector2 vector3 = new Vector2((int) num2, (int) num3);
+                Vector2 vector3 = Calc.Floor(new Vector2(num2, num3));
 
                 Color color = Color.Lerp(rayColor, fadeColor, percent) * Ease.CubeInOut(Calc.Clamp(((percent < 0.5f) ? percent : (1f - percent)) * 2f, 0f, 1f)) * fade;
                 if (entity != null) {
